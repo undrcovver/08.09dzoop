@@ -7,6 +7,21 @@ class Fraction
     int numerator;
     int denominator;
     public:
+
+    Fraction() 
+    {
+        cout << "Constructor by default: ";
+        numerator = 1;
+        denominator = 2;
+    }
+
+    Fraction(int n, int d) 
+    {
+        numerator = n;
+        denominator = d;
+        cout << "Contstructor by 2 paras: ";
+    }
+
     void Init()
     {
         cout << "Enter the numerator: ";
@@ -53,7 +68,7 @@ class Fraction
 int main()
 {
     Fraction frac;
-
+    frac.Print();
     int Num;
     int Den;
 
@@ -70,6 +85,9 @@ int main()
     frac.SetDen(Den);
     cout << "Your new fraction is = ";
     frac.Print();
+
+    Fraction newFrac(15, 20);
+    newFrac.Print();
 
     cout << "\n";
 
