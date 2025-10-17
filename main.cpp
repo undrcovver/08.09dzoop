@@ -65,36 +65,55 @@ class Fraction
 
 };
 
+ostream& operator<<(ostream& os, Fraction& obj)
+{
+    os << "Numerator: " << obj.GetNum() << "Detominator: " << obj.GetDen() << endl;
+    return os;
+}
+
+istream& operator>>(istream& is, Fraction obj)
+{
+    int temp;
+    is >> temp;
+    obj.SetNum(temp);
+    is >> temp;
+    obj.SetDen(temp);
+    return is;
+}
+
 int main()
 {
     Fraction frac;
-    frac.Print();
-    int Num;
-    int Den;
+    cout << frac << endl;
+    cin >> frac;
 
-    frac.Init();
-    cout << "Your fraction is = ";
-    frac.Print();
+    // int Num;
+    // int Den;
+
+    // frac.Init();
+    // cout << "Your fraction is = ";
+    // frac.Print();
 
 
-    cout << "Enter your new numerator: ";
-    cin >> Num;
-    frac.SetNum(Num);
-    cout << "Enter your new denominator: ";
-    cin >> Den;
-    frac.SetDen(Den);
-    cout << "Your new fraction is = ";
-    frac.Print();
+    // cout << "Enter your new numerator: ";
+    // cin >> Num;
+    // frac.SetNum(Num);
+    // cout << "Enter your new denominator: ";
+    // cin >> Den;
+    // frac.SetDen(Den);
+    // cout << "Your new fraction is = ";
+    // frac.Print();
 
-    Fraction newFrac(15, 20);
-    newFrac.Print();
+    // Fraction newFrac(15, 20);
+    // newFrac.Print();
 
-    cout << "\n";
+    // cout << "\n";
 
-    int n = frac.GetNum();
-    cout << n << endl;
+    // int n = frac.GetNum();
+    // cout << n << endl;
 
-    int d = frac.GetNum();
-    cout << d << endl;
+    // int d = frac.GetNum();
+    // cout << d << endl;
+
 
 }
